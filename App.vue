@@ -1,6 +1,7 @@
 <template>
   <view class="container">
-    <text class="text-color-primary">{{ message }}</text>
+    <text class="text-color-primary">{{ app_title }}</text>
+    <button v-bind:title="app_title" v-bind:on-press="handleBtnPress" />
     </view>
 </template>
  
@@ -8,8 +9,13 @@
 export default {
   data: function() {
     return {
-      message: "Hello World"
+      app_title: "tabula rasa"
     };
+  },
+  methods: {
+    handleBtnPress: function() {
+      alert('You have just been alerted.');
+    }
   }
 };
 </script>
